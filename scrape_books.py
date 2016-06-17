@@ -42,7 +42,7 @@ for page_num in range(1,NUM_PAGES+1):
 	sleep(30)
 
 def get_year(book):
-	return int(book["date"]/split()[1])
+	return int(book["date"].split()[1])
 
 year_counts = Counter(get_year(book) for book in books if get_year(book) <= 2016)
 
